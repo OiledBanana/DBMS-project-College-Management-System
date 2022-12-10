@@ -1,0 +1,137 @@
+<html>
+    <head>
+        <title>Students</title>
+        <link rel="stylesheet" href="css/database.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale1">
+        <script src=""></script>
+        <style>
+            body{
+                 min-height: 100vh;
+                 width: 100%;
+                 background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/bg11.png);
+                 background-position: center;
+                 background-size: cover;
+                 position: relative;
+            }
+            select {
+                 width: 150px;
+                 margin: 10px;
+                   }
+            select:focus {
+                 min-width: 150px;
+                 width: auto;
+    }
+        </style>
+        <script>
+            var date = new Date();
+            var year = date.getFullYear();
+            var month = date.getMonth()+1;
+            var todayDate = String(date.getDate()).padStart(2,'0');
+            var datePattern = year + '-' + month + '-' + todayDate;
+            document.getElementById("date").value = datePattern;
+        </script>
+    </head>
+
+    <body>
+        <div class="tableQ">
+            <!--Header pic ng staff logo/icon sa left ng appropriate type-->
+            <!--Sa right logo ng school-->
+            <div class="header" id="cdsga">
+
+                <font face="Old English Text MT" size="6">Student Information</font>
+            </div>
+
+            <div class="topnav">
+                <a href="main.php"><font face = "Bedrock" size = "4">Home</font></a>
+                <a href="Students.html"><font face = "Bedrock" size = "4">Students</font></a>
+                <a href="Teachers.html"><font face = "Bedrock" size = "4">Teachers</font></a>
+                <a href="Staff.html"><font face = "Bedrock" size = "4">Staffs</font></a>
+            </div>
+
+            <div class="container">
+                <div class="title"><font face = "Times New Roman" size = "">Student Registration Form</font></div>
+                <form action="#">
+                   <div class="user-details">
+                      <div class="input-box">
+                        <span class="details"><font face = "Arial" size = "4">Last Name</font></span>
+                        <input type="text" name="lastName" placeholder="Enter Last Name" required>
+                     </div>
+                     <div class="input-box">
+                        <span class="details"><font face = "Times New Roman" size = "3">First Name</font></span>
+                        <input type="text" name="firstName" placeholder="Enter your First Name" required>
+                     </div>
+                     <div class="input-box">
+                        <span class="details"><font face = "Times New Roman" size = "3">Middle Name</font></span>
+                        <input type="text" name = "middleName"placeholder="Enter Middle Name" required>
+                     </div>
+                     <div class="input-box">
+                       <span class="details"><font face = "Times New Roman" size = "3">Birthday</font></span>
+                       <input type="date" name = "date" id="date">
+                    </div>
+                    <div class="input-box">
+                       <span class="details"><font face = "Times New Roman" size = "3">Email</font></span>
+                       <input type="text" name = "email"placeholder="Enter your email" required name = "date">
+                    </div>
+                    <div class="input-box">
+                       <span class="details"><font face = "Times New Roman" size = "3">Phone Number</font></span>
+                       <input type="text" name = "phoneNumber"placeholder="Enter your phone number" required>
+                    </div>
+                    <div class="input-box">
+                       <span class="details"><font face = "Times New Roman" size = "3">Address</font></span>
+                       <input type="text" name = "phoneNumber" placeholder="Street Name, Building, House No." required>
+                    </div>
+                    <div class="input-box">
+                       <span class="details"><font face = "Times New Roman" size = "3">Course</font></span>
+                       <select id="course" size="1"  name = "course">
+                           <optgroup>
+                           <option value="Course"><font face = "Times New Roman" size = "3">Select Course</font></option>
+                           <option value="BSIT" class="h2">Bachelor of Science in Information Technology</option>
+                           <option value="BSCS">Bachelor of Science in Computer Science</option>
+                       </select>
+                       <select id="course" size="1" >
+                        <optgroup>
+                        <option value="Course"><font face = "Times New Roman" size = "3">Select School Year</font></option>
+                        <option value="1st" class="h2">1st Year</option>
+                        <option value="2nd">2nd Year</option>
+                        <option value="3rd" class="h2">3rd Year</option>
+                        <option value="4th">4th Year</option>
+                    </select> 
+                    </div>
+
+                   </div>
+                   <div class="gender-details">
+                       <input type="radio" name="gender" id="dot-1">
+                       <input type="radio" name="gender" id="dot-2">
+                       <input type="radio" name="gender" id="dot-3">
+                       <span class="gender-title"><font face = "Times New Roman" size = "3">Gender</font></span>
+                       <div class="category">
+                           <label for="dot-1">
+                               <span class="dot one"></span>
+                               <span class="gender"><font face = "Times New Roman" size = "3">Male</font></span>
+                           </label>
+                           <label for="dot-2">
+                               <span class="dot two"></span>
+                               <span class="gender"><font face = "Times New Roman" size = "3">Female</font></span>
+                           </label>
+                           <label for="dot-3">
+                               <span class="dot three"></span>
+                               <span class="gender"><font face = "Times New Roman" size = "3">Prefer not to say</font></span>
+                           </label>
+                       </div>
+                   </div>
+                   <div align="center">
+                    <!--Baguhin nyo nalang ung formaction or formtarget-->
+                    <!--Palagyan JS ung onclick pop up-->
+                    <button class="button button2" type="submit" formaction="#" onclick="">Create</button>
+                    <button class="button button2" type="submit" formaction="#">Update</button>
+                    <button class="button button1" type="submit" formaction="#">Remove</button>
+                    <button class="button button1"type="reset">Reset</button>
+                </div>
+                 </form>
+                </div>
+                <!-- database -->
+                <center><p><u><i>See databases</i></u></p></center>
+                <br>
+    </body>
+</html>
